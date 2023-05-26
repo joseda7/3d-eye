@@ -1,7 +1,5 @@
-import Header from './components/Header/Header'
-import PanelElements from './components/PanelElements/PanelElements'
-import PanelZoom from './components/PanelZoom/PanelZoom'
-import CanvasScene from './components/CanvasScene/CanvasScene'
+import Header from './components/molecules/Header/Header'
+import CanvasScene from './components/organisms/CanvasScene/CanvasScene'
 
 const App = () => {
 
@@ -9,8 +7,6 @@ const App = () => {
     <>
       <Header/>
       <CanvasScene/>
-      <PanelElements/>
-      <PanelZoom/>
     </>
   )
 }
