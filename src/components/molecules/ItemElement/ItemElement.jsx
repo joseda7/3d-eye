@@ -4,14 +4,16 @@ import './ItemElement.scss'
 const ItemElement = ({name, isVisible, onHide}) => {
   return ( 
     <div className='itemElement'>
-      <button onClick={onHide}> 
         { isVisible ? (
+          <button onClick={onHide} data-hover="Hide"> 
             <Icon id='visible'/>
+          </button>
           ):
+          <button onClick={onHide} data-hover="Show" className='--opacity'> 
             <Icon id='invisible'/>
+          </button>
         }
-      </button>
-      <p>{name}</p>
+      <p className={!isVisible ? '--opacity':''}> {name} </p>
     </div>
   )
 }

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     background: var(--rhino);
-    margin: 7px 0;
+    margin: 10px 0;
     width: 100%;
     max-width: 400px;
     border-radius: var(--radius-primary);
@@ -11,3 +11,9 @@
         padding: 0;
     }
 }
+
+.--opacity {
+    opacity: 0.5;
+}
+
+

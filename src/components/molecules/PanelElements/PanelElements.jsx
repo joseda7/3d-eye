@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react'
 import { SceneContext } from '../../../context/sceneContext'
+import { getFileNameFromUrl } from '../../../utilities/utilities'
 import Icon from '../../atoms/Icon/Icon'
 import './PanelElements.scss'
 import ItemElement from '../ItemElement/ItemElement'
@@ -20,27 +21,34 @@ const PanelElements = () => {
   } 
 
   return (
-    <section className={'panelElements ' + (isOpen ? 'panelElements--open' : '')}>
+    <section className={'panelElements ' + (isOpen ? 'panelElements--open' : '')} >
         <div className='panelElements__head'>
-            <button
-              onClick={()=>{ setIsOpen(!isOpen) }}>
-                <Icon id='arrow-down' addClass={isOpen ? 'icon--rotate' : ''} />
-            </button>
+            { isOpen ? (
+              <button data-hover="Close panel" onClick={()=>setIsOpen(!isOpen)}>
+                  <Icon id='arrow-down'/>
+              </button>
+            ):(
+              <button data-hover="Show panel" onClick={()=>setIsOpen(!isOpen)}>
+                  <Icon id='arrow-up'/>
+              </button>
+            )}
             <span> Elements </span>
         </div>
-        {
-          theScene && theScene.map((item, index)=>{
-              return (
-                  <ItemElement 
-                    key = {index}
-                    name = {item.src.split("/")[1]}
-                    isVisible = {item.isVisible}
-                    onHide = {() => handleOnHide(item, index)}
-                  />
-              )
-            
-          })
-        }
+        <div className='panelElements__body'>
+          {
+            theScene && theScene.map((item, index)=>{
+                return (
+                    <ItemElement 
+                      key = {index}
+                      name = {getFileNameFromUrl(item.src).fullName}
+                      isVisible = {item.isVisible}
+                      onHide = {() => handleOnHide(item, index)}
+                    />
+                )
+              
+            })
+          }
+        </div>
     </section>
   )
 }

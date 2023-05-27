@@ -1,5 +1,4 @@
-.panelZoom {
-    width: 200px;
+.panelControls {
     height: 50px;
     position: fixed;
     bottom: 12px;
@@ -10,4 +9,12 @@
     justify-content: space-around;
     align-items: center;
     padding: 0 10px;
+
+    @media (max-width: 768px) { 
+        & {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 94%;
+        }
+    }
 }

@@ -1,12 +1,23 @@
 :root {
-    --onyx: #242424;
+    // Colors
+    --onyx: #292e35;
+    --darksteel: #303841;
     --steel: #4F5B68;
     --rhino: #5C6978;
     --gray: #808080;
     --bone: #ffffffde;
     --white: #ffffff;
+    --deepocean: #0b8ebe3a;
     --ocean: #0B8DBE;
+    --sky: #15b5f0;
+    // Styles
     --radius-primary: 7px;
-    --font-consolas: 'Consolas'  
+    --font-consolas: 'Consolas';  
+    // Breakpoints
+    --xs: 420px;
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
 }
   

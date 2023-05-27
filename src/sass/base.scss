@@ -1,3 +1,4 @@
+// Generals
 * {
     font-family: var(--font-consolas);
     color: var(--white);
@@ -29,16 +30,19 @@ a {
     }
 }
 
+// Canvas
 canvas {
     cursor: grab;
     position: relative;
 }
 
+// Headings
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
 }
 
+// Button
 button {
     border-radius: 6px;
     margin: 3px;
@@ -46,21 +50,47 @@ button {
     background-color: transparent;
     cursor: pointer;
     transition: border-color 0.25s;
-    
+    position: relative;
     &:hover {
-        background-color: var(--ocean);
+        background-color: var(--deepocean);
+        opacity: 1;
+        svg path {
+            fill: var(--sky);
+        }
     }
-    
     &:focus, &:focus-visible {
         outline: none;
     }
+    &:after {
+        content: attr(data-hover);
+        position: absolute;
+        background-color: black;
+        height: auto;
+        width: max-content;
+        padding: 3px 8px;
+        top: -50%;
+        left: 80%;
+        border-radius: 6px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    &:hover:after {
+        opacity: 1;
+    }
 }
 
-.separator {
-    position: relative;
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
-    margin: 10px auto;
-    mix-blend-mode: screen;
+// Scroll
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: var(--rhino);
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--onyx);
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darksteel);
 }

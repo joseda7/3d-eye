@@ -12,11 +12,31 @@ export const MODELS = [
         isVisible: false
     },
     { 
-        src: '/Dragon.stl',
+        src: '/CharacterPumpkin.gltf', 
         isVisible: false
     },
     { 
-        src: '/Nebula.ply', 
+        src: '/CharacterPumpkin.gltf', 
+        isVisible: false
+    },
+    { 
+        src: '/CharacterPumpkin.gltf', 
+        isVisible: false
+    },
+    { 
+        src: '/CharacterPumpkin.gltf', 
+        isVisible: false
+    },
+    { 
+        src: '/CharacterPumpkin.gltf', 
         isVisible: false
     }
+    // { 
+    //     src: '/Dragon.stl',
+    //     isVisible: false
+    // },
+    // { 
+    //     src: '/Nebula.ply', 
+    //     isVisible: false
+    // }
 ]
