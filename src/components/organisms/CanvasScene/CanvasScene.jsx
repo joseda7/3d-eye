@@ -17,6 +17,7 @@ const CanvasScene = () => {
           <Suspense fallback={<Loader/>}>
             <Scene />
           </Suspense>
+          {/* <Loader/> */}
         </Canvas>
         <div className='origin'></div>
         <PanelElements/>

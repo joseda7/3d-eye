@@ -11,10 +11,15 @@
     padding: 10px;
     margin-bottom: 5px;
     z-index: 10;
-}
+    
+    &__logo {
+        height: 90%;
+        box-sizing: border-box;
+        padding: 3px;
+    }
 
-.header__logo {
-    height: 85%;
-    box-sizing: border-box;
-    padding: 3px;
+    &__codelink {
+        display: flex;
+        align-items: center;
+    }
 }

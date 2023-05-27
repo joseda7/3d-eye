@@ -5,10 +5,15 @@
     right: 10px;
     background-color: var(--steel);
     border-radius: var(--radius-primary);
-    padding: 10px;
+    padding: 0 10px;
     height: 50px; 
     transition: height ease-in 0.2s;
-
+    overflow: hidden;
+    &__head {
+        display: flex;
+        align-items: center;
+        margin: 3px auto;
+    }
     &--open {
         height: 66vh; 
     }

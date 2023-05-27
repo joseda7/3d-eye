@@ -1,0 +1,13 @@
+.itemElement {
+    display: flex;
+    align-items: center;
+    background: var(--rhino);
+    margin: 7px 0;
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--radius-primary);
+    p {
+        margin: 0 0 0 5px;
+        padding: 0;
+    }
+}
