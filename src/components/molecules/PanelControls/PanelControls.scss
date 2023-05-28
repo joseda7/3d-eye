@@ -1,8 +1,8 @@
 .panelControls {
     height: 50px;
-    position: fixed;
-    bottom: 12px;
-    left: 10px;
+    position: absolute;
+    bottom: calc(12px - 50vh);
+    left: calc(10px - 50vw);
     background-color: var(--steel);
     border-radius: var(--radius-primary);
     display: flex;
@@ -10,11 +10,10 @@
     align-items: center;
     padding: 0 10px;
 
-    @media (max-width: 768px) { 
-        & {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            width: 94%;
-        }
-    }
+    // @media (max-width: 768px) { 
+    //     & {
+    //         overflow-x: scroll;
+    //         width: 94%;
+    //     }
+    // }
 }

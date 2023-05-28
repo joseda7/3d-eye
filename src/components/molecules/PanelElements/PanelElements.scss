@@ -1,4 +1,5 @@
 .panelElements {
+    height: 50px; 
     width: 300px;
     position: fixed;
     bottom: 12px;
@@ -6,15 +7,14 @@
     background-color: var(--steel);
     border-radius: var(--radius-primary);
     padding: 0 10px;
-    height: 50px; 
     transition: height ease-in 0.1s;
+    z-index: 100;
     &__head {
         display: flex;
         align-items: center;
         margin: 3px auto;
     }
     &__body {
-        overflow-y: scroll;
         opacity:0;
         transition: opacity 0.5s ease-in;
         height: 0;
@@ -23,9 +23,13 @@
     }
     &--open {
         height: 66vh; 
+        padding-bottom: 60px;
         .panelElements__body {
-            opacity:1;
             height: auto;
+            opacity:1;
+        }
+        button.btnAdd {
+            display: block;
         }
     }
 
@@ -35,6 +39,17 @@
             opacity: 0.9;
             width: 67%;
             left: 10px;
+        } 
+    }
+
+    & .btnAdd {
+        background-color: var(--white);
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: none;
+        svg path {
+            fill: var(--onyx);
         } 
     }
 }

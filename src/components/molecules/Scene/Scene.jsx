@@ -42,7 +42,7 @@ const Scene = () => {
     console.log(loadedModels, "loadedModels");
     return (
         loadedModels.length > 0 && loadedModels.map((item, index) => {
-            return <primitive object={item} scale={0.4} key={index}/>
+            return <primitive object={item} scale={0.6} key={index}/>
         })
     )
 };

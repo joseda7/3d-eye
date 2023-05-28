@@ -1,7 +1,5 @@
-
-<p style="text-align:center"> <b>👁 3D-eye</b> is a visualizer that loads 3D mesh and point cloud files in the browser.
+<p style="text-align:center"> <b>👁 3D-eye</b> is a visualizer that loads 3D models in the browser.
 </p>
-
 
 ## Developers
 This project is made using [React](https://es.react.dev/) + [Vite](https://vitejs.dev/). 
@@ -24,7 +22,7 @@ Installs all modules listed as dependencies in package.json
 
 Now in the project directory, you can run: \
 `npm run dev` \
-Runs the app in the development mode
+Runs the app in the development mode. Follow the instructions in the console, open the browser and you will see the project running.
 
 `npm test` \
 Launches the test runner in the interactive watch mode.

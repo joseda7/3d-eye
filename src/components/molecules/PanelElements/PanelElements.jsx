@@ -8,7 +8,6 @@ import ItemElement from '../ItemElement/ItemElement'
 const PanelElements = () => {
 
   const { theScene, setTheScene } = useContext(SceneContext);
-  
   const [isOpen, setIsOpen] = useState(true);
 
   const handleOnHide = (element, index) => {
@@ -32,7 +31,7 @@ const PanelElements = () => {
                   <Icon id='arrow-up'/>
               </button>
             )}
-            <span> Elements </span>
+            <span> 3D Models </span>
         </div>
         <div className='panelElements__body'>
           {
@@ -49,6 +48,9 @@ const PanelElements = () => {
             })
           }
         </div>
+        <button className='btnAdd --disabled' data-hover="Add new 3D model">
+            <Icon id='plus' />
+        </button> 
     </section>
   )
 }

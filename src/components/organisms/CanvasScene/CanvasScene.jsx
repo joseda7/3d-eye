@@ -1,6 +1,8 @@
-import { Suspense } from 'react'
+import { Suspense, useRef, useState } from 'react'
+// import { AxesHelper } from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Text, Html } from '@react-three/drei'
+// import { Html } from '@react-three/drei'
 import Scene from '../../molecules/Scene/Scene' 
 import Loader from '../../atoms/Loader/Loader'
 import PanelElements from '../../molecules/PanelElements/PanelElements'
@@ -8,40 +10,25 @@ import PanelControls from '../../molecules/PanelControls/PanelControls'
 import './CanvasScene.scss'
 
 const CanvasScene = () => {
-
-  const MouseControls = () => {
-    const { camera } = useThree();
-
-    // const handleZoomIn = (factor) => {
-    //   camera.position.x = camera.position.x * factor;
-    //   camera.position.y = camera.position.y * factor;
-    //   camera.position.z = camera.position.z * factor;
-    // }
-
-    // return (
-      // <button onClick={()=>handleZoomIn(2)}>
-      //   +
-      // </button>
-    // )
-  }
+  // const { camera } = useThree();
+  const [zPosition, setZPosition] = useState(0);
+  // const controlsRef = useRef();
 
   return (
       <>
-        <Canvas>
-          <ambientLight intensity={0.1} />
-          <directionalLight color="red" position={[0, 0, 5]} />
+        <Canvas 
+          camera={{ position: [5, 5, 5] }}>
+          <ambientLight intensity={0.1}/>
+          <directionalLight color="orange" position={[0, 10, 10]} />
           <OrbitControls makeDefault/>
-          <MouseControls/>
           <Suspense fallback={<Loader/>}>
             <Scene />
+            <axesHelper args={[1]}/>
+            <PanelControls/>
           </Suspense>
         </Canvas>
-        <div className='origin'></div>
         <PanelElements/>
-        <PanelControls/>
-        {/* <button onClick={()=>handleZoomIn(2)}>
-          +
-        </button> */}
+        {/* <div className='origin'></div> */}
       </>
   );
 }
