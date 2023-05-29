@@ -48,7 +48,7 @@ const PanelControls = ({controls}) => {
                 <div className="help" onClick={ () => SetIsHelpOpen(!isHelpOpen)}>
                     <img src={ SvgEye } alt="Isotype 3DEye" />
                     <p> <b>3D-eye</b> is a visualizer that loads 3D models in the browser.</p>
-                    <br/><br/><br/>
+                    <br/><br/>
                     <div className="help__body">
                         <div>
                             <Icon id='plus'/>
@@ -61,17 +61,17 @@ const PanelControls = ({controls}) => {
                             <Icon id='rotate-y'/>
                             <Icon id='rotate-z'/>
                             <h2> Rotate </h2>
-                            <p> Use the mouse gestures. <br/> <i>🪐 UI buttons comming soon</i> </p>
+                            <p> Use the mouse gestures <br/> <i>🪐 UI buttons coming soon.</i> </p>
                         </div>
                         <div>
                             <Icon id='pan'/>
                             <h2> Pan </h2>
-                            <p> Use the mouse gestures. <br/> <i>🪐 UI buttons comming soon</i> </p>
+                            <p> Use the mouse gestures. <br/> <i>🪐 UI buttons coming soon.</i> </p>
                         </div>
                         <div>
                             <Icon id='plus'/>
-                            <h2> Add New 3D models </h2>
-                            <p> <i>🪐 Comming soon</i> </p>
+                            <h2> Add 3D models </h2>
+                            <p> <i>🪐 Add .PLY, .STL files via API Coming soon.</i> </p>
                         </div>
                     </div>
                 </div>

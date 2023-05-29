@@ -1,5 +1,6 @@
 import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { Html } from '@react-three/drei'
 import ModelsScene from '../../molecules/ModelsScene/ModelsScene' 
 import Loader from '../../atoms/Loader/Loader'
 import PanelElements from '../../molecules/PanelElements/PanelElements'
@@ -51,12 +52,16 @@ const CanvasScene = () => {
           <Suspense 
             fallback={<Loader/>}>
             <ModelsScene />
-            <axesHelper 
-              args={[2]}/>
+            <Html>
+              <div className='origin'></div>
+            </Html>
+            {/* <axesHelper 
+              args={[2]}/> */}
           </Suspense>
         
         </Canvas>
         
+        <PanelElements/>
         <PanelControls 
           controls={{
             updatedZoom,
@@ -66,8 +71,6 @@ const CanvasScene = () => {
           }}
         />
 
-        <PanelElements/>
-        {/* <div className='origin'></div> */}
       </>
   );
 }

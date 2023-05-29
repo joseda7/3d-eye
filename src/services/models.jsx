@@ -1,7 +1,7 @@
 /* 
 
-Base API 
---------
+ API -> Coming soon
+--------------------
 
 1. GET /api/models: Retrieve a list of available 3D models.
 

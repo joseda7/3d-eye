@@ -37,7 +37,7 @@ It bundles the project in production mode and optimizes the build for the best p
 
 🙈 Hide/Show different models in the same scene. 
 
-## Comming soon
+## Coming soon
 
 ### 🪐 API
 - `GET` `/api/models`: Retrieve a list of available 3D models.
