@@ -19,7 +19,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-color: var(--onyx);
+    background-color: var(--darksteel);
 }
 
 a {
@@ -39,6 +39,10 @@ canvas {
 // Headings
 h1 {
     font-size: 3.2em;
+    line-height: 1.1;
+}
+h2 {
+    font-size: 2em;
     line-height: 1.1;
 }
 

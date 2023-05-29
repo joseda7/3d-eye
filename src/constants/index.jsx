@@ -1,23 +1,28 @@
+// import { nanoid } from "nanoid"
+
 export const MODELS = [
     { 
-        id: 11,
-        name: 'Mario',
-        format: 'obj',
+        id: 102,
+        fileName: 'Mario.obj',
         src: '/Mario.obj',
         isVisible: true
     },
     {
-        id: 12,
-        name: 'ObjTest',
-        format: 'obj',
+        id: 102,
+        fileName: 'ObjTest.obj',
         src: '/ObjTest.obj',
         isVisible: false
     },
     {
-        id: 12,
-        name: 'CharacterPumpkin',
-        format: 'gltf', 
+        id: 102,
+        fileName: 'CharacterPumpkin.gltf', 
         src: '/CharacterPumpkin.gltf', 
+        isVisible: false
+    },
+    {
+        id: 102,
+        fileName: 'Boat.obj', 
+        src: '/Boat.obj', 
         isVisible: false
     }
     // { 

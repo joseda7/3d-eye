@@ -1,8 +1,8 @@
 .panelControls {
     height: 50px;
     position: absolute;
-    bottom: calc(12px - 50vh);
-    left: calc(10px - 50vw);
+    bottom: 12px;
+    left: 10px;
     background-color: var(--steel);
     border-radius: var(--radius-primary);
     display: flex;
@@ -10,10 +10,35 @@
     align-items: center;
     padding: 0 10px;
 
-    // @media (max-width: 768px) { 
-    //     & {
-    //         overflow-x: scroll;
-    //         width: 94%;
-    //     }
-    // }
+    @media (max-width: 768px) { 
+        & {
+            // overflow-x: scroll;
+            width: 94%;
+        }
+    }
+}
+
+.help {
+    width: 100vw;
+    height: 100vh;
+    background: #000000a6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &__body {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        div {
+            width: 200px;
+        }
+    }
 }

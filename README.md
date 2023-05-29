@@ -6,14 +6,13 @@ This project is made using [React](https://es.react.dev/) + [Vite](https://vitej
 
 Here you will find a custom configuration for the growing solution that uses methodologies such as [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/) and [BEM](https://getbem.com/). 
 
-Also, you will see implemented features for **3D graphics** using [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) and [React Three Drei](https://github.com/pmndrs/drei), **UI styles** using [Sass](https://sass-lang.com/), CSS variables and Scalable Vector Graphics (SVG), and **Unit Testing** using [Jest](https://jestjs.io/).
+Also, you will see implemented features for **3D graphics** using [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) and [React Three Drei](https://github.com/pmndrs/drei), **UI styles** using [Sass](https://sass-lang.com/), CSS variables and Scalable Vector Graphics (SVG).
 
 ## Getting Started
-Install the recommended version of Node [here](https://nodejs.org/es/).
+Install the recommended version of Node.js from [here](https://nodejs.org/es/).
 
-To verify both `node` and `npm` installed versions, on your terminal you can run: \
-`node -v` \
-`npm -v` 
+Once it's done, verify `node` installed version. On your terminal you can run: \
+`node -v` 
 
 ## Run the Project
 In the project directory, run: \

@@ -16,7 +16,7 @@ const PanelElements = () => {
       isVisible: !element.isVisible
     }
     const newScene = theScene.map((element, id) => (id === index ? updatedElement : element));
-    newScene && setTheScene(newScene); // Update the Scene Context
+    newScene && setTheScene(newScene); // Updating the Scene Context
   } 
 
   return (

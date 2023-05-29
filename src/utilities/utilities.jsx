@@ -10,3 +10,4 @@ export const getFileNameFromUrl = (url) => {
 
     return file
 }
+

@@ -1,78 +1,83 @@
-import { useThree } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
+import { useState } from 'react'
 import Icon from '../../atoms/Icon/Icon'
 import './PanelControls.scss'
-import { useState } from 'react';
+import SvgEye from '/isotype.svg'
+const PanelControls = ({controls}) => {
 
-const PanelControls = () => {
+    const [isHelpOpen, SetIsHelpOpen] = useState(false);
+    const {
+        updatedZoom,
+        handleZoomIn,
+        handleZoomOut,
+        handleRotation
+    } = controls;
 
-    const { camera } = useThree();
-    const { 
-        position, 
-        rotation
-    } = camera
-
-    const [zPosition, setZPosition] = useState(position.z);
-
-    const handleZoomIn = () => {
-        position.x -= 1;
-        position.y -= 1;
-        position.z -= 1;
-        setZPosition(position.z);
-        console.log(camera);
-    };
-
-    const handleZoomOut = () => {
-        position.x += 1;
-        position.y += 1;
-        position.z += 1;
-        setZPosition(position.z);
-    };
-
-    const handleRotateX = () => {
-        rotation.x += 1;
-        console.log(camera);
-    };  
-
-    // const handleRotateRight = () => {
-    
-    // };
-
-    // const handlePan = () => {
-    //     camera.translateX(1);
-    // };
-
-  return (
-    <Html>
+    return (
         <section className="panelControls">
             <button data-hover="Zoom out" onClick={ handleZoomOut }>
                 <Icon id='minus' />
             </button>
-
-            <div> {Math.floor(zPosition)}% </div>
-
-            <button data-hover="Zoom in" onClick={ position.z > 0 && handleZoomIn }>
+            <div> 
+                { Math.floor(updatedZoom) * 10 } % 
+            </div>
+            <button data-hover="Zoom in" onClick={ handleZoomIn }>
                 <Icon id='plus' />
             </button> 
 
-            <button data-hover="Rotate X" onClick={handleRotateX}>
+            <button data-hover="Rotate X" onClick={ handleRotation } className='--disabled' >
                 <Icon id='rotate-x' />
             </button> 
-            {/*
-            <button data-hover="Rotate Y" onClick={handleZoomOut}>
+            
+            <button data-hover="Rotate Y" onClick={ handleRotation } className='--disabled'>
                 <Icon id='rotate-y' />
             </button> 
 
-            <button data-hover="Rotate Z" onClick={handleZoomOut}>
+            <button data-hover="Rotate Z" onClick={ handleRotation } className='--disabled'>
                 <Icon id='rotate-z' />
-            </button>  */}
+            </button> 
 
-            <button data-hover="SOS" className='--disabled'>
+            <button data-hover="Pan" onClick={ handleRotation } className='--disabled'>
+                <Icon id='pan' />
+            </button> 
+
+            <button data-hover="SOS" onClick={ () => SetIsHelpOpen(!isHelpOpen) }>
                 <Icon id='help' />
             </button> 
+
+            { isHelpOpen && (
+                <div className="help" onClick={ () => SetIsHelpOpen(!isHelpOpen)}>
+                    <img src={ SvgEye } alt="Isotype 3DEye" />
+                    <p> <b>3D-eye</b> is a visualizer that loads 3D models in the browser.</p>
+                    <br/><br/><br/>
+                    <div className="help__body">
+                        <div>
+                            <Icon id='plus'/>
+                            <Icon id='minus'/>
+                            <h2> Zoom </h2>
+                            <p> Use the mouse gestures or the UI buttons. </p>
+                        </div>
+                        <div>
+                            <Icon id='rotate-x'/>
+                            <Icon id='rotate-y'/>
+                            <Icon id='rotate-z'/>
+                            <h2> Rotate </h2>
+                            <p> Use the mouse gestures. <br/> <i>🪐 UI buttons comming soon</i> </p>
+                        </div>
+                        <div>
+                            <Icon id='pan'/>
+                            <h2> Pan </h2>
+                            <p> Use the mouse gestures. <br/> <i>🪐 UI buttons comming soon</i> </p>
+                        </div>
+                        <div>
+                            <Icon id='plus'/>
+                            <h2> Add New 3D models </h2>
+                            <p> <i>🪐 Comming soon</i> </p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
-    </Html>
-  )
+    )
 }
 
 export default PanelControls

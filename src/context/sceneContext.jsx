@@ -8,7 +8,7 @@ export const SceneProvider = ({children}) => {
     const [theScene, setTheScene] = useState(MODELS);
 
     useEffect(() => {
-        console.log("Setup changed!", theScene);
+        console.log("Context changed!", theScene);
     }, [theScene])
 
     return (
