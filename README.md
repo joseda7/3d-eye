@@ -29,3 +29,43 @@ Launches the test runner in the interactive watch mode.
 `npm run build` \
 Builds the app for production to the `build` folder.
 It bundles the project in production mode and optimizes the build for the best performance.
+
+##  Main features
+🤖 Visualization for 3D models in .OBJ and .GLTF file formats.
+
+☝ Natural gestures to orbit around a given model.
+
+🙈 Hide/Show different models in the same scene. 
+
+## Comming soon
+
+### 🪐 API
+- `GET` `/api/models`: Retrieve a list of available 3D models.
+
+    Response: An array of model objects, each containing information such as ID, name, format, and other relevant metadata.
+
+- `GET` `javascript /api/models/{modelId}`: Retrieve a specific model by its ID.
+    Parameters:
+        {modelId}: The unique identifier of the model.
+    Response: The model object containing detailed information about the model.
+
+- `POST` `/api/models`: Upload a new 3D model.
+    Request: The 3D model file (e.g., OBJ, STL, PLY) and any additional metadata.
+    Response: The newly created model object with its assigned ID.
+
+- `PUT` `/api/models/{modelId}`: Update an existing 3D model.
+    Parameters:
+        {modelId}: The unique identifier of the model to be updated.
+    Request: The updated model object or specific fields to be modified.
+    Response: The updated model object.
+    
+- `DELETE` `/api/models/{modelId}`: Delete a specific 3D model.
+    Parameters:
+        {modelId}: The unique identifier of the model to be deleted.
+    Response: A success message or status indicating the deletion was successful.
+
+### 🪐 UI controls
+Panning and new buttons to easily interact with the model. 
+
+### 🪐 Other formats: .PLY, .STL, .GLB
+Support for most popular 3D model formats 
